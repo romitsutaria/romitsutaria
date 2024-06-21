@@ -8,7 +8,7 @@ jobs:
   hello:
      runs-on: ubuntu-latest
      steps:
-      - uses: action/checkou@v4   #here @ can be anything branch , commit tag
+      - uses: action/checkout@v4   #here @ can be anything branch , commit tag
       - name: hello work
         run: echo "Hello Romit!!!"
         shell: bash
