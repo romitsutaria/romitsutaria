@@ -1,10 +1,12 @@
-name: Create comnent on new issue
-on:  
-  issues:
-        types: [opened]
+name: Open new issue
+on: workflow_dispatch
+
 jobs:
-  comment-with-action:
+  open-issue:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
     steps:
       - name: Dump github context
         run: echo '${{ toJson(github.event)}}' | jq
@@ -19,5 +21,4 @@ jobs:
               - Created by [create-or-update-comment][1]
 
             [1]: https://github.com/peter-evans/create-or-update-comment
-          reactions: '+1'   
-        
+          reactions: '+1'
