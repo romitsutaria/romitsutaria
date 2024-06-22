@@ -10,7 +10,7 @@ jobs:
         run: echo '${{ toJson(github.event)}}' | jq
         shell: bash
       - name: create comment
-        uses: peter-evans/create-or-update-commen@v4
+        uses: peter-evans/create-or-update-comment@v4
         with: 
           issue-number: '${{github.event.issue.number}}'
           body: |
