@@ -18,9 +18,13 @@ jobs:
         with: 
           issue-number: ${{github.event.issue.number}}
           body: |
+            [] Check wiki page
+            [] Check with peer
             This is a multi-line test comment
               - With GitHub **Markdown** :sparkles:
               - Created by [create-or-update-comment][1]
+              - Troubleshooting guid [Link][2]
 
             [1]: https://github.com/peter-evans/create-or-update-comment
+            [2]: https://google.com
           reactions: '+1'
