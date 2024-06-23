@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4   #here @ can be anything branch , commit tag
       - name: hello work
         run: |
-           echo "Hello Romit!!! > index.txt
+           echo "Hello Romit!!!" > index.txt
            git add index.txt
            git commit -m "add greeting message"
            git push origin main
