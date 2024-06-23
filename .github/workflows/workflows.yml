@@ -7,8 +7,12 @@ on:
 jobs:
   hello:
      runs-on: ubuntu-latest
+     permissions:
+      contents: write
      steps:
       - uses: actions/checkout@v4   #here @ can be anything branch , commit tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: hello work
         run: |
            echo "Hello Romit!!!" > index.txt
