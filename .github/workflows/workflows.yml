@@ -10,7 +10,9 @@ jobs:
      steps:
       - uses: actions/checkout@v4   #here @ can be anything branch , commit tag
       - name: hello work
-        run: echo "Hello Romit!!!"
+        run: |
+           echo "Hello Romit!!!"
+           ls -lrt
         shell: bash
   Goodbye:
      runs-on: ubuntu-latest
