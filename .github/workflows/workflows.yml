@@ -12,6 +12,8 @@ jobs:
       - name: hello work
         run: |
            echo "Hello Romit!!!" > index.txt
+           git config user.email "automation@github_bot.com"
+           git config user.name "github_bot"
            git add index.txt
            git commit -m "add greeting message"
            git push origin main
