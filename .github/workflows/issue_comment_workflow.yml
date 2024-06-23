@@ -10,7 +10,7 @@ jobs:
       contents: read
       issues: write
     steps:
-      - name: Dump github context
+      - name: Dump Github context
         run: echo '${{ toJson(github.event)}}' | jq
         shell: bash
       - name: create comment
@@ -18,12 +18,12 @@ jobs:
         with: 
           issue-number: ${{github.event.issue.number}}
           body: |
-            [] Check wiki page
-            [] Check with peer
+            - [ ] Checked wiki page
+            - [ ] Checked with peer
             This is a multi-line test comment
               - With GitHub **Markdown** :sparkles:
               - Created by [create-or-update-comment][1]
-              - Troubleshooting guid [Link][2]
+              - Troubleshooting guide [Link][2]
 
             [1]: https://github.com/peter-evans/create-or-update-comment
             [2]: https://google.com
